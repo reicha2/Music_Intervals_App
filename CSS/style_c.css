@@ -1,0 +1,151 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+/* Custom CSS for button layout */
+#options {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-gap: 10px;
+    justify-content: center;
+    /* Align buttons in the center */
+}
+
+.interval-button {
+    margin: 5px;
+}
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.wrong-answer {
+    background-color: red !important;
+}
+
+.correct-answer {
+    background-color: green !important;
+}
+
+/* Increase font size for all elements */
+body {
+    font-size: 18px;
+}
+
+/* Increase size of headings */
+h1 {
+    font-size: 1.0em;
+}
+
+/* Increase size of buttons */
+.btn {
+    font-size: 0.7em;
+}
+
+/* Increase size of container */
+.container {
+    max-width: 90%;
+    margin-top: 20px;
+}
+
+/* Increase size of feedback text */
+#feedback {
+    font-size: 1.2em;
+}
+
+/* Increase font size for the question */
+#question {
+    font-size: 2.5em;
+    color: blue;
+}
+
+/* Decrease font size for the "Next Interval" button */
+#nextBtn {
+    font-size: 1em;
+}
+
+/* Add margin around interval buttons */
+.btn {
+    margin: 5px;
+}
+
+#stats {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#resetBtn {
+    font-size: 14px;
+}
+
+.navbar {
+    position: fixed;
+    right: 0px;
+    top: 0;
+    z-index: 1000;
+    width: 0px;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: white;
+    text-align: center;
+    width: auto;
+    padding: 8px 16px;
+    font-size: 15px;
+    display: block;
+    white-space: nowrap;
+}
+
+.btn-green {
+    background-color: green !important;
+}
+
+.btn-blue {
+    background-color: blue !important;
+}
+
+.btn-red {
+    background-color: red !important;
+}
+
+/* עיצוב עמודות */
+.interval-col {
+    display: flex;
+    /* הצגת הכפתורים בתוך העמודה באופן אופקי */
+    flex-direction: column;
+    /* הצגת הכפתורים בעמודה עם כיוון אנכי */
+    /* align-items: center; */
+    /* מירוצה של הכפתורים למרכז העמודה */
+    gap: 0;
+    /* הסרת מרווח בין הכפתורים */
+    /* width: 100px; */
+    /* height: 40px; */
+}
+
+/* עיצוב גריד */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* שישה עמודות בגודל שווה */
+    gap: 5px;
+    /* מרווחים קטנים יותר בין העמודות */
+    margin: 0 auto;
+    /* ממורכז אופקית במרכז הדף */
+    max-width: 90%;
+    /* מקסימום רוחב של הטבלה */
+    margin-left: 180px;
+    /* מרווח משמאל */
+    margin-right: 180px;
+    /* מרווח מימין */
+}

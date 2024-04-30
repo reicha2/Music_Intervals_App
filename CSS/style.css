@@ -1,0 +1,117 @@
+.container {
+  text-align: center;
+  margin-top: 20px; /* Adjusted margin-top */
+}
+
+#feedback {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.wrong-answer {
+  background-color: red !important;
+}
+
+.correct-answer {
+  background-color: green !important;
+}
+
+/* Increase font size for all elements */
+body {
+  font-size: 18px;
+  /* Adjust the value as needed */
+}
+
+/* Increase size of headings */
+h1 {
+  font-size: 1.0em;
+  /* Adjust the value as needed */
+}
+
+/* Increase size of buttons */
+.btn {
+  font-size: 1.3em;
+  /* Adjust the value as needed */
+}
+
+/* Increase size of container */
+.container {
+  max-width: 90%;
+  /* Adjust the value as needed */
+  margin-top: 20px; /* Adjusted margin-top */
+}
+
+/* Increase size of feedback text */
+#feedback {
+  font-size: 1.2em;
+  /* Adjust the value as needed */
+}
+
+/* Increase font size for the question */
+#question {
+  font-size: 2.5em;
+  /* Adjust the value as needed */
+  color: blue;
+}
+
+/* Decrease font size for the "Next Interval" button */
+#nextBtn {
+  font-size: 1em;
+  /* Adjust the value as needed */
+}
+
+/* Add margin around interval buttons */
+.btn {
+  margin: 5px;
+  /* Adjust the value as needed */
+}
+
+#stats {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#resetBtn {
+  /* Add any additional styles you want */
+  /* For example, changing the font size */
+  font-size: 14px;
+}
+
+.navbar {
+  position: fixed;
+  right: 0px;
+  /* Adjust the distance from the right side */
+  top: 0;
+  z-index: 1000;
+  width: 0px;
+  /* Make the navbar slimmer */
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: white;
+  /* Set text color */
+  text-align: center;
+  /* Center-align the text */
+  width: auto;
+  /* Make the links occupy full width */
+  padding: 8px 16px;
+  /* Add padding to the buttons */
+  font-size: 15px;
+  display: block;
+  white-space: nowrap;
+}
+
+.btn-green {
+  background-color: green !important;
+  /* Set the background color to green */
+}
+
+.btn-blue {
+  background-color: blue !important;
+  /* Set the background color to blue */
+}
+
+.btn-red {
+  background-color: red !important;
+  /* Set the background color to red */
+}
