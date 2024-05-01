@@ -8,15 +8,10 @@
 
 .interval-button {
     margin: 5px;
-    /* שוליים סביב כל כפתור */
     padding: 10px;
-    /* ריווח פנימי בכפתור */
     border: 1px solid #ccc;
-    /* גבול לכל כפתור */
     border-radius: 5px;
-    /* פינות מעוגלות */
     font-size: 1em;
-    /* גודל גופן אחיד */
     cursor: pointer;
 }
 
@@ -136,16 +131,17 @@ border-radius: 5px;
 font-size: 1em;
 cursor: pointer;
 }
+
 #options {
 display: grid;
-grid-template-columns: repeat(, auto); /* יצירת שלוש עמודות בכל שורה */
-gap: 10px; /* ריווח בין הכפתורים */
-justify-content: center; /* מרכז את העמודות באמצעות CSS Grid */
+grid-template-columns: repeat(6, auto);
+gap: 10px; 
+justify-content: center; 
 }
 
 /* תכונות נוספות של הכפתורים */
 .interval-button {
-display: block; /* שינוי המראה של הכפתורים */
+display: block;
 margin: 5px;
 padding: 2px;
 border: 1px solid #ccc;
@@ -159,4 +155,10 @@ grid-column: 5;
 }
 .interval-button:nth-child(22){
 grid-column: 6; 
+}
+
+@media screen and (max-width: 375px) { /* Adjust the max-width value as needed */
+    #options {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust the minmax values as needed */
+    }
 }

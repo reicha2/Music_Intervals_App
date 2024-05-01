@@ -115,3 +115,9 @@ h1 {
     display: flex;
     justify-content: center;
 }
+
+@media screen and (max-width: 375px) { /* Adjust the max-width value as needed */
+    #options {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust the minmax values as needed */
+    }
+}
