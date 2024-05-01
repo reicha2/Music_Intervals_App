@@ -8,6 +8,7 @@
 
 .interval-button {
     margin: 5px;
+    padding: 2px;
 }
 
 .container {
@@ -40,7 +41,7 @@ h1 {
 
 /* Increase size of buttons */
 .btn {
-    font-size: 0.7em;
+    font-size: 1em;
 }
 
 /* Increase size of container */

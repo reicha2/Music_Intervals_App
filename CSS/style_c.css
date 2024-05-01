@@ -1,33 +1,43 @@
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: center;
-}
 /* Custom CSS for button layout */
 #options {
     display: grid;
     grid-template-columns: repeat(6, auto);
     grid-gap: 10px;
     justify-content: center;
-    /* Align buttons in the center */
 }
 
 .interval-button {
     margin: 5px;
+    /* שוליים סביב כל כפתור */
+    padding: 10px;
+    /* ריווח פנימי בכפתור */
+    border: 1px solid #ccc;
+    /* גבול לכל כפתור */
+    border-radius: 5px;
+    /* פינות מעוגלות */
+    font-size: 1em;
+    /* גודל גופן אחיד */
+    cursor: pointer;
 }
+
+.interval-button:hover {
+    background-color: #eee;
+    /* צבע רקע בהעברת עכבר */
+}
+
 
 .container {
     text-align: center;
     margin-top: 20px;
+    max-width: 90%;
+    /* סמן יד בהעברת עכבר */
+
 }
 
 #feedback {
     margin-top: 20px;
     font-weight: bold;
+    font-size: 1.2em;
 }
 
 .wrong-answer {
@@ -50,34 +60,15 @@ h1 {
 
 /* Increase size of buttons */
 .btn {
-    font-size: 0.7em;
+    font-size: 1em;
+    margin: 5px;
 }
 
-/* Increase size of container */
-.container {
-    max-width: 90%;
-    margin-top: 20px;
-}
-
-/* Increase size of feedback text */
-#feedback {
-    font-size: 1.2em;
-}
 
 /* Increase font size for the question */
 #question {
     font-size: 2.5em;
     color: blue;
-}
-
-/* Decrease font size for the "Next Interval" button */
-#nextBtn {
-    font-size: 1em;
-}
-
-/* Add margin around interval buttons */
-.btn {
-    margin: 5px;
 }
 
 #stats {
@@ -119,33 +110,53 @@ h1 {
     background-color: red !important;
 }
 
-/* עיצוב עמודות */
+/* design columns */
 .interval-col {
     display: flex;
-    /* הצגת הכפתורים בתוך העמודה באופן אופקי */
     flex-direction: column;
-    /* הצגת הכפתורים בעמודה עם כיוון אנכי */
-    /* align-items: center; */
-    /* מירוצה של הכפתורים למרכז העמודה */
     gap: 0;
-    /* הסרת מרווח בין הכפתורים */
-    /* width: 100px; */
-    /* height: 40px; */
 }
 
-/* עיצוב גריד */
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    /* שישה עמודות בגודל שווה */
     gap: 5px;
-    /* מרווחים קטנים יותר בין העמודות */
     margin: 0 auto;
-    /* ממורכז אופקית במרכז הדף */
     max-width: 90%;
-    /* מקסימום רוחב של הטבלה */
     margin-left: 180px;
-    /* מרווח משמאל */
     margin-right: 180px;
-    /* מרווח מימין */
+}
+.interval-button {
+display: block; /* שינוי המראה של הכפתורים */
+margin: 5px;
+padding: 10px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 1em;
+cursor: pointer;
+}
+#options {
+display: grid;
+grid-template-columns: repeat(, auto); /* יצירת שלוש עמודות בכל שורה */
+gap: 10px; /* ריווח בין הכפתורים */
+justify-content: center; /* מרכז את העמודות באמצעות CSS Grid */
+}
+
+/* תכונות נוספות של הכפתורים */
+.interval-button {
+display: block; /* שינוי המראה של הכפתורים */
+margin: 5px;
+padding: 2px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 1em;
+cursor: pointer;
+}
+
+.interval-button:nth-child(21){
+grid-column: 5; 
+}
+.interval-button:nth-child(22){
+grid-column: 6; 
 }
