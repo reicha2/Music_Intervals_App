@@ -45,21 +45,42 @@ window.addEventListener("DOMContentLoaded", () => {
         const randomType = intervalTypes[Math.floor(Math.random() * intervalTypes.length)];
         const intervalList = intervals[randomType];
         const randomInterval = intervalList[Math.floor(Math.random() * intervalList.length)];
+        const fixedName = fixIntervalName(randomInterval);
         currentInterval = {
             type: randomType,
-            name: randomInterval
+            name: fixedName
         };
         return currentInterval;
     }
+    
+
+    function fixIntervalName(name) {
+        const symbols = ['דו', 'רה', 'מי', 'פה', 'סול', 'לה', 'סי'];
+        const adjacentSymbols = ['b', '#'];
+    
+        for (let symbol of symbols) {
+            for (let adjacentSymbol of adjacentSymbols) {
+                const regex = new RegExp(`${adjacentSymbol}${symbol}`, 'g');
+                name = name.replace(regex, `${symbol}${adjacentSymbol}`);
+            }
+        }
+    
+        return name;
+    }
 
     function displayQuestion() {
-        questionElement.textContent = `מהו המרווח בין "${currentInterval.name}"?`;
+        let intervalName = currentInterval.name;
+        // Replace flat notes with ♭ and sharp notes with ♯
+        intervalName = intervalName.replace(/b/g, "♭").replace(/#/g, "♯");
+        questionElement.textContent = `מהו המרווח בין "${intervalName}"?`;
         optionsElement.innerHTML = "";
-
+    
         Object.keys(intervals).forEach(key => {
             optionsElement.innerHTML += `<button class="btn btn-secondary interval-button">${key}</button>`;
         });
     }
+    
+    
 
     function checkAnswer(selectedName) {
         totalQuestions++;
@@ -118,6 +139,8 @@ window.addEventListener("DOMContentLoaded", () => {
         const buttons = document.querySelectorAll("#options button");
         buttons.forEach(button => button.disabled = false);
     });
+
+    
 
     // Display the first question
     currentInterval = getRandomInterval();
